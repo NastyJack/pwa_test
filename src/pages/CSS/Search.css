@@ -80,6 +80,8 @@ textarea {
 }
 
 body {
+  position: absolute;
+  z-index: -3;
   background: linear-gradient(145deg, #be06df, #2f2dd6);
   background-size: 400% 400%;
 

@@ -4,6 +4,7 @@ import SearchBox from "../components/SearchBox";
 import SpinnerLoader from "../Static/Images/SpinnerLoader.svg";
 import "../pages/CSS/Search.css";
 import { Image } from "antd";
+
 var axios = require("axios").default;
 
 function Search() {
@@ -18,7 +19,7 @@ function Search() {
   useEffect(() => {
     const delayDebounceFn = setTimeout(() => {
       if (SearchTerm !== "" && SearchTerm !== 0) {
-        console.log("Searching... ", SearchTerm);
+        //  console.log("Searching... ", SearchTerm);
         setLoader(true);
         fetchIMDb(SearchTerm, setUpdateResults, setLoader);
       }
@@ -64,7 +65,8 @@ function fetchIMDb(SearchTerm, setUpdateResults, setLoader) {
     .then(function (response) {
       setUpdateResults(response);
       setLoader(false);
-      console.log(response.data);
+
+      //   console.log(response.data);
     })
     .catch(function (error) {
       console.error(error);
